@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import css from "./Planes.module.css";
 
 // import defaultImage from "../default.jpg"; //! Дефолтне зображення
 import defaultImage from "@/components/default.jpg"; //! Дефолтне зображення --> Аліаси імпортів з абсолютними шляхами з jsconfig.json
@@ -23,33 +24,35 @@ export function Planes({
   }
   return (
     <>
-      <h3 className="planeTitle">{nameBrief}</h3>
+      <h3 className={css.planeTitle}>{nameBrief}</h3>
       <img src={urlMain} alt={nameBrief} />
-      <p className="textField">Повна назва: <span className="textFieldValue boldStyle">{nameFull}</span></p>
-      <p className="textField">Тип: <span className="textFieldValue">{type}</span></p>
-      <p className="textField">Прізвисько: <span className="textFieldValue">{nickname}</span></p>
-      <p className="textField">Країна виробник: <span className="textFieldValue">{country}</span></p>
-      <p className="textField">Рік випуску: <span className="textFieldValue">{year}</span></p>
-      <p className="textField">Ціна: <span className="textFieldValue">{price}</span></p>
-      <p className="textField">Опис: <span className="textFieldValue">{description}</span></p>
+      {/* <p className="textField">Повна назва: <span className="textFieldValue boldStyle">{nameFull}</span></p> */}
+      {/* //! Використання властивості composes */}
+      <p className={css.textField}>Повна назва: <span className={css.boldStyle} >{nameFull}</span></p>
+      <p className={css.textField}>Тип: <span className={css.textFieldValue}>{type}</span></p>
+      <p className={css.textField}>Прізвисько: <span className={css.textFieldValue}>{nickname}</span></p>
+      <p className={css.textField}>Країна виробник: <span className={css.textFieldValue}>{country}</span></p>
+      <p className={css.textField}>Рік випуску: <span className={css.textFieldValue}>{year}</span></p>
+      <p className={css.textField}>Ціна: <span className={css.textFieldValue}>{price}</span></p>
+      <p className={css.textField}>Опис: <span className={css.textFieldValue}>{description}</span></p>
       {/*//! заголовок зображень */}
-      <h4 className="imageTitles">Рекламна модель:</h4>
+      <h4 className={css.imageTitles}>Рекламна модель:</h4>
       <img src={urlPromotional} alt={nameBrief} className="promotionalImage" />
       {/*//! заголовок зображень */}
-      <h4 className="imageTitles">Реальна модель:</h4>
-      <div className="actualImageBox">
+      <h4 className={css.imageTitles}>Реальна модель:</h4>
+      <div className={css.actualImageBox}>
         {urlActual.map(item =>
           <img
             // key={item} //! поки що не унікальний
             src={item}
             alt={nameBrief}
-            className="actualImage"
+            className={css.actualImage}
           />
         )}
       </div>
       <button
         type="button"
-        className="planeButton"
+        className={css.planeButton}
       >
         Додати до кошику
       </button>

@@ -7,6 +7,8 @@ export function getBgColorBuiltInStyles(year) {
     if (year > 1999) bgColor = '#d6f1ff';
     return bgColor;
 };
+// _____________________________________________________
+
 
 //todo: var.1
 // export function getBgColorVanillaCSS(year) {
@@ -47,7 +49,18 @@ export function getBgColorVanillaCSS(year) {
     console.log("classNames:", classNames); //!
     return classNames;
 };
+// _____________________________________________________
 
 
+//todo: CSS-модулі 
+export function getBgColorCSSModule(year) {
+    // return "planesItem"
+
+    let className = "planesItem";
+    if (year > 1945) className = "planesItemLast";
+    if (year > 1999) className = "planesItemCurrent";
+    console.log("className:", className); //!
+    return className;
+};
 
 
