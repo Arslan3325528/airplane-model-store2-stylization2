@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-function Section({ title, children }) {
+export function Section({ title, children }) {
   return (
     <section>
-      {title && <h2>{title}</h2>} 
+      {title && <h2 className="title">{title}</h2>} 
       {children}
     </section>
   );
@@ -14,4 +14,3 @@ Section.propTypes = {
   children: PropTypes.node,
 };
 
-export default Section;
