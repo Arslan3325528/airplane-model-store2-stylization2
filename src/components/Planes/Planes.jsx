@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
 
 //! Бібліотека react-icons
-import { FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'; //! приклад react-icons
+import { FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'; //! Приклад react-icons
 import { AiOutlineFlag, AiOutlineInfoCircle, AiOutlineClockCircle, AiOutlineDollarCircle } from "react-icons/ai";
 import { GiArmoredBoomerang, GiCeremonialMask, GiAirplaneDeparture, GiCommercialAirplane, GiCurlyMask } from "react-icons/gi";
 import { CiBadgeDollar, CiGlobe, CiAirportSign1 } from "react-icons/ci";
 import { TbClockHour4Filled } from "react-icons/tb";
 import { FcTrademark } from "react-icons/fc";
-
 //? nameBrief
 //? nameFull - <FcTrademark /> - Повна назва
 //? type - <GiArmoredBoomerang /> - бумеранг, <GiCommercialAirplane /> - літак- Тип
@@ -25,6 +24,7 @@ import css from "./Planes.module.css";
 // import defaultImage from "../default.jpg"; //! Дефолтне зображення
 import defaultImage from "@/components/default.jpg"; //! Дефолтне зображення --> ✅✅✅Аліаси імпортів з абсолютними шляхами з jsconfig.json
 
+//! Для розрахунку тривалості виробництва
 import { getManufacturingYears } from '@/utils/formatDateDuration.js';
 
 
@@ -46,12 +46,12 @@ export function Planes({
   function printlActualimages(urlActual) {
     urlActual.map
   }
-  //! Рахуємо тривалість виробництва
+  //! Розраховуємо тривалість виробництва
   const duration = getManufacturingYears(manufacturingStart, manufacturingEnd);
   // console.log("duration", duration); //!
   return (
     <>
-      {/* //! приклад react-icons */}
+      {/* //! Приклад react-icons */}
       {/* <FaMapMarkerAlt /><FaUserAlt /><FaCalendarAlt /><FaClock /> */}
       {/* <FaMapMarkerAlt size={iconSize.sm} /> */}
 
@@ -64,7 +64,8 @@ export function Planes({
       <p className={css.textField}><GiCurlyMask size={28} className={css.icon} /> Прізвисько: <span className={css.textFieldValue}>{nickname}</span></p>
       <p className={css.textField}><CiGlobe size={28} className={css.icon} /> Країна виробник: <span className={css.textFieldValue}>{country}</span></p>
       <p className={css.textField}><AiOutlineClockCircle size={28} className={css.icon} /> Рік випуску: <span className={css.textFieldValue}>{year}</span></p>
-      <p className={css.textField}><TbClockHour4Filled size={28} className={css.icon} /> Тривалість виробництва (в роках): <span className={css.textFieldValue}>{duration}</span></p>
+      {/* <p className={css.textField}><TbClockHour4Filled size={28} className={css.icon} /> Тривалість виробництва (в роках): <span className={css.textFieldValue}>{duration}</span></p> */}
+      <p className={css.textField}><TbClockHour4Filled size={28} className={css.icon} /> Тривалість виробництва (в роках): <span className={css.textFieldValue}>{getManufacturingYears(manufacturingStart, manufacturingEnd)}</span></p>
       <p className={css.textField}><AiOutlineDollarCircle size={28} className={css.icon} /> Ціна: <span className={css.textFieldValue}>{price}</span></p>
       <p className={css.textField}><AiOutlineInfoCircle size={28} className={css.icon} /> Опис: <span className={css.textFieldValue}>{description}</span></p>
       {/*//! заголовок зображень */}
