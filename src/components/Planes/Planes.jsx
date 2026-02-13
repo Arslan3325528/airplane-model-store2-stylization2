@@ -34,9 +34,9 @@ import {
   getManufacturingYears //! Для розрахунку тривалості виробництва
 } from '@/utils'; 
 
-console.log("getBgColorBuiltInStyles(1951):", getBgColorBuiltInStyles(1951));
-console.log("getBgColorVanillaCSS(1951):", getBgColorVanillaCSS(1951));
-console.log("getBgColorCSSModule(1951):", getBgColorCSSModule(1951));
+console.log("1️⃣getBgColorBuiltInStyles(1951):", getBgColorBuiltInStyles(1951));
+console.log("2️⃣getBgColorVanillaCSS(1951):", getBgColorVanillaCSS(1951));
+console.log("3️⃣getBgColorCSSModule(1951):", getBgColorCSSModule(1951));
 
 
 export function Planes({
