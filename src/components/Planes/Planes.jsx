@@ -23,6 +23,8 @@ import css from "./Planes.module.css";
 // import defaultImage from "../default.jpg"; //! Дефолтне зображення
 import defaultImage from "@/components/default.jpg"; //! Дефолтне зображення --> ✅✅✅Аліаси імпортів з абсолютними шляхами з jsconfig.json
 
+import { getManufacturingYears } from '@/utils/formatDateDuration.js';
+
 
 export function Planes({
   urlMain = defaultImage, //! Дефолтне зображення
@@ -42,6 +44,9 @@ export function Planes({
   function printlActualimages(urlActual) {
     urlActual.map
   }
+  //! Рахуємо тривалість виробництва
+  const duration = getManufacturingYears(manufacturingStart, manufacturingEnd);
+  // console.log("duration", duration); //!
   return (
     <>
       {/* //! приклад react-icons */}
@@ -57,7 +62,7 @@ export function Planes({
       <p className={css.textField}><GiCurlyMask size={28} className={css.icon} /> Прізвисько: <span className={css.textFieldValue}>{nickname}</span></p>
       <p className={css.textField}><CiGlobe size={28} className={css.icon} /> Країна виробник: <span className={css.textFieldValue}>{country}</span></p>
       <p className={css.textField}><AiOutlineClockCircle size={28} className={css.icon} /> Рік випуску: <span className={css.textFieldValue}>{year}</span></p>
-      <p className={css.textField}><AiOutlineClockCircle size={28} className={css.icon} /> Тривалість виробництва (в роках): <span className={css.textFieldValue}>{10}</span></p>
+      <p className={css.textField}><AiOutlineClockCircle size={28} className={css.icon} /> Тривалість виробництва (в роках): <span className={css.textFieldValue}>{duration}</span></p>
       <p className={css.textField}><AiOutlineDollarCircle size={28} className={css.icon} /> Ціна: <span className={css.textFieldValue}>{price}</span></p>
       <p className={css.textField}><AiOutlineInfoCircle size={28} className={css.icon} /> Опис: <span className={css.textFieldValue}>{description}</span></p>
       {/*//! заголовок зображень */}
