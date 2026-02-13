@@ -79,15 +79,7 @@
   color: blue;
 }
 
-/*todo: додатково: */
-/* .promotionalImage {
-  max-height: 315px;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
 .actualImageBox {
-  /* min-height: 418px;  */ /*todo: додатково: */
   display: flex;
   gap: 10px;
   flex-wrap: wrap;

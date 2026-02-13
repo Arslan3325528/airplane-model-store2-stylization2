@@ -1,6 +1,5 @@
 .planeTitle {
-    height: 72px;
-    /*todo: додатково: */
+    height: 72px; /*todo: додатково: */
     margin-bottom: 12px;
     padding: 12px 16px;
     font-size: 32px;
@@ -35,7 +34,6 @@
     text-align: center;
     color: blue;
 }
-
 
 .actualImageBox {
     /* min-height: 418px;  */

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import css from "./Planes.module.css";
 
 // import defaultImage from "../default.jpg"; //! Дефолтне зображення
-import defaultImage from "@/components/default.jpg"; //! Дефолтне зображення --> Аліаси імпортів з абсолютними шляхами з jsconfig.json
+import defaultImage from "@/components/default.jpg"; //! Дефолтне зображення --> ✅✅✅Аліаси імпортів з абсолютними шляхами з jsconfig.json
 
 
 export function Planes({
