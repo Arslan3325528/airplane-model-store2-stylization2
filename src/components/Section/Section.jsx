@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import css from "./Section.module.css";
 
 export function Section({ title, children }) {
+  //! Перевірка режимів: development або prodaction
+  // console.log("import.meta.env.MODE:", import.meta.env.MODE); //? development
   return (
     <section>
       {/* //! Вбудовані стилі  */}
