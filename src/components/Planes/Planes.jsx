@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
-import { FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock } from 'react-icons/fa';
-import css from "./Planes.module.css";
 
+import { FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'; //! приклад
+import { AiOutlineFlag } from "react-icons/ai";
+// AiOutlineFlag - прапор
+
+import css from "./Planes.module.css";
 
 // import defaultImage from "../default.jpg"; //! Дефолтне зображення
 import defaultImage from "@/components/default.jpg"; //! Дефолтне зображення --> ✅✅✅Аліаси імпортів з абсолютними шляхами з jsconfig.json
