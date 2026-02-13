@@ -25,7 +25,18 @@ import css from "./Planes.module.css";
 import defaultImage from "@/components/default.jpg"; //! Дефолтне зображення --> ✅✅✅Аліаси імпортів з абсолютними шляхами з jsconfig.json
 
 //! Для розрахунку тривалості виробництва
-import { getManufacturingYears } from '@/utils/formatDateDuration.js';
+// import { getManufacturingYears } from '@/utils/formatDateDuration.js';
+//! Реекспорт - декілька імпортів з однієї папки
+import {
+  getBgColorBuiltInStyles,
+  getBgColorVanillaCSS,
+  getBgColorCSSModule,
+  getManufacturingYears //! Для розрахунку тривалості виробництва
+} from '@/utils'; 
+
+console.log("getBgColorBuiltInStyles(1951):", getBgColorBuiltInStyles(1951));
+console.log("getBgColorVanillaCSS(1951):", getBgColorVanillaCSS(1951));
+console.log("getBgColorCSSModule(1951):", getBgColorCSSModule(1951));
 
 
 export function Planes({
