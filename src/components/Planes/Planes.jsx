@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
+import { FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock } from 'react-icons/fa';
 import css from "./Planes.module.css";
+
 
 // import defaultImage from "../default.jpg"; //! Дефолтне зображення
 import defaultImage from "@/components/default.jpg"; //! Дефолтне зображення --> ✅✅✅Аліаси імпортів з абсолютними шляхами з jsconfig.json
@@ -28,7 +30,8 @@ export function Planes({
       <img src={urlMain} alt={nameBrief} />
       {/* <p className="textField">Повна назва: <span className="textFieldValue boldStyle">{nameFull}</span></p> */}
       {/* //! Використання властивості composes */}
-      <p className={css.textField}>Повна назва: <span className={css.boldStyle} >{nameFull}</span></p>
+      {/* <FaMapMarkerAlt size={iconSize.sm} /> */}
+      <p className={css.textField}><FaMapMarkerAlt /> Повна назва: <span className={css.boldStyle} >{nameFull}</span></p>
       <p className={css.textField}>Тип: <span className={css.textFieldValue}>{type}</span></p>
       <p className={css.textField}>Прізвисько: <span className={css.textFieldValue}>{nickname}</span></p>
       <p className={css.textField}>Країна виробник: <span className={css.textFieldValue}>{country}</span></p>
