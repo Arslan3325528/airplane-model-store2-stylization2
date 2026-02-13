@@ -2,13 +2,14 @@ import PropTypes from 'prop-types';
 
 import { FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'; //! приклад
 import { AiOutlineFlag, AiOutlineInfoCircle, AiOutlineClockCircle } from "react-icons/ai";
+import { GiArmoredBoomerang } from "react-icons/gi";
 
 // nameBrief
 // nameFull,
 // nickname
 // year - <AiOutlineClockCircle /> - рік
 // country - <AiOutlineFlag /> - прапор, країна
-// type
+// type - <GiArmoredBoomerang /> - тип
 // price
 // description - <AiOutlineInfoCircle /> - опис
 
