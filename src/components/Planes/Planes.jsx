@@ -2,12 +2,15 @@ import PropTypes from 'prop-types';
 
 import { FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'; //! приклад
 import { AiOutlineFlag, AiOutlineInfoCircle, AiOutlineClockCircle } from "react-icons/ai";
-import { AiOutlineClockCircle } from "react-icons/ai";
 
-import {  } from "react-icons/ai";
-// <AiOutlineFlag /> - прапор, країна (country)
-// <AiOutlineInfoCircle /> - опис (description)
-// <AiOutlineClockCircle /> - рік (year)
+// nameBrief
+// nameFull,
+// nickname
+// year - <AiOutlineClockCircle /> - рік
+// country - <AiOutlineFlag /> - прапор, країна
+// type
+// price
+// description - <AiOutlineInfoCircle /> - опис
 
 import css from "./Planes.module.css";
 
