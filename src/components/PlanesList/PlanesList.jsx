@@ -37,6 +37,8 @@ export function PlanesList({ items }) {
                         type={item.info.type}
                         price={item.info.price}
                         description={item.info.description}
+                        manufacturingStart={item.manufacturing.start}
+                        manufacturingEnd={item.manufacturing.end}
                     />
                 </li>
             )}

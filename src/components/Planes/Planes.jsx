@@ -35,7 +35,9 @@ export function Planes({
   country,
   type,
   price = "немає інформації",
-  description
+  description,
+  manufacturingStart,
+  manufacturingEnd
 }) {
   function printlActualimages(urlActual) {
     urlActual.map
@@ -55,6 +57,7 @@ export function Planes({
       <p className={css.textField}><GiCurlyMask size={28} className={css.icon} /> Прізвисько: <span className={css.textFieldValue}>{nickname}</span></p>
       <p className={css.textField}><CiGlobe size={28} className={css.icon} /> Країна виробник: <span className={css.textFieldValue}>{country}</span></p>
       <p className={css.textField}><AiOutlineClockCircle size={28} className={css.icon} /> Рік випуску: <span className={css.textFieldValue}>{year}</span></p>
+      <p className={css.textField}><AiOutlineClockCircle size={28} className={css.icon} /> Тривалість виробництва (в роках): <span className={css.textFieldValue}>{10}</span></p>
       <p className={css.textField}><AiOutlineDollarCircle size={28} className={css.icon} /> Ціна: <span className={css.textFieldValue}>{price}</span></p>
       <p className={css.textField}><AiOutlineInfoCircle size={28} className={css.icon} /> Опис: <span className={css.textFieldValue}>{description}</span></p>
       {/*//! заголовок зображень */}
