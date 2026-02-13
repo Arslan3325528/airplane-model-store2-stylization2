@@ -8,8 +8,10 @@ export function Section({ title, children }) {
     <section>
       {/* //! Вбудовані стилі  */}
       {/* {title && <h2 className="title">{title}</h2>} */}
-      {/* //! Ванільний CSS  */}
-      {title && <h2 className={css.title}>{title}</h2>}
+      {/* //! Ванільний CSS з композицією класів */}
+      {/* {title && <h2 className={`${css.title} ${css.lugrasimoBold}`}>{title}</h2>} */}
+      {/* //! Ванільний CSS з composes */}
+      {title && <h2 className={css.titleLugrasimoBold}>{title}</h2>}
       {children}
     </section>
   );
