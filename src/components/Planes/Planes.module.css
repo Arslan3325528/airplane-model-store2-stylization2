@@ -32,7 +32,18 @@
 
 .imageTitles {
     text-align: center;
+    vertical-align: bottom;
     color: blue;
+}
+
+/*/*todo: Налаштування для іконок */
+.icon {
+    margin-bottom: -8px;
+    color: #9b25fc;
+}
+
+.iconImageTitles {
+    margin-bottom: -10px;
 }
 
 .actualImageBox {

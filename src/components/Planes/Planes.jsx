@@ -1,17 +1,22 @@
 import PropTypes from 'prop-types';
 
-import { FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'; //! приклад
-import { AiOutlineFlag, AiOutlineInfoCircle, AiOutlineClockCircle } from "react-icons/ai";
-import { GiArmoredBoomerang } from "react-icons/gi";
+//! Бібліотека react-icons
+import { FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'; //! приклад react-icons
+import { AiOutlineFlag, AiOutlineInfoCircle, AiOutlineClockCircle, AiOutlineDollarCircle } from "react-icons/ai";
+import { GiArmoredBoomerang, GiCeremonialMask, GiAirplaneDeparture, GiCommercialAirplane, GiCurlyMask } from "react-icons/gi";
+import { CiBadgeDollar, CiGlobe, CiAirportSign1 } from "react-icons/ci";
+import { FcTrademark } from "react-icons/fc";
 
-// nameBrief
-// nameFull,
-// nickname
-// year - <AiOutlineClockCircle /> - рік
-// country - <AiOutlineFlag /> - прапор, країна
-// type - <GiArmoredBoomerang /> - тип
-// price
-// description - <AiOutlineInfoCircle /> - опис
+//? nameBrief
+//? nameFull - <FcTrademark /> - Повна назва
+//? type - <GiArmoredBoomerang /> - бумеранг, <GiCommercialAirplane /> - літак- Тип
+//? nickname - <GiCeremonialMask /> маска1, <GiCurlyMask /> маска2  - Прізвисько
+//? country - <AiOutlineFlag /> - прапор, <CiGlobe /> - глобус - Країна виробник
+//? year - <AiOutlineClockCircle /> - годинник - Рік випуску
+//? price - <CiBadgeDollar/> - $, <AiOutlineDollarCircle /> - $ - Ціна
+//? description - <AiOutlineInfoCircle /> - info - Опис
+//? <GiAirplaneDeparture /> - Рекламна модель
+//? <CiAirportSign1 /> - Реальна модель
 
 import css from "./Planes.module.css";
 
@@ -31,30 +36,32 @@ export function Planes({
   type,
   price = "немає інформації",
   description
-})
-{
+}) {
   function printlActualimages(urlActual) {
     urlActual.map
   }
   return (
     <>
+      {/* //! приклад react-icons */}
+      {/* <FaMapMarkerAlt /><FaUserAlt /><FaCalendarAlt /><FaClock /> */}
+      {/* <FaMapMarkerAlt size={iconSize.sm} /> */}
+
       <h3 className={css.planeTitle}>{nameBrief}</h3>
       <img src={urlMain} alt={nameBrief} />
       {/* <p className="textField">Повна назва: <span className="textFieldValue boldStyle">{nameFull}</span></p> */}
       {/* //! Використання властивості composes */}
-      {/* <FaMapMarkerAlt size={iconSize.sm} /> */}
-      <p className={css.textField}><FaMapMarkerAlt /> Повна назва: <span className={css.boldStyle} >{nameFull}</span></p>
-      <p className={css.textField}>Тип: <span className={css.textFieldValue}>{type}</span></p>
-      <p className={css.textField}>Прізвисько: <span className={css.textFieldValue}>{nickname}</span></p>
-      <p className={css.textField}>Країна виробник: <span className={css.textFieldValue}>{country}</span></p>
-      <p className={css.textField}>Рік випуску: <span className={css.textFieldValue}>{year}</span></p>
-      <p className={css.textField}>Ціна: <span className={css.textFieldValue}>{price}</span></p>
-      <p className={css.textField}>Опис: <span className={css.textFieldValue}>{description}</span></p>
+      <p className={css.textField}><FcTrademark size={28} className={css.icon} /> Повна назва: <span className={css.boldStyle} >{nameFull}</span></p>
+      <p className={css.textField}><GiCommercialAirplane size={28} className={css.icon} /> Тип: <span className={css.textFieldValue}>{type}</span></p>
+      <p className={css.textField}><GiCurlyMask size={28} className={css.icon} /> Прізвисько: <span className={css.textFieldValue}>{nickname}</span></p>
+      <p className={css.textField}><CiGlobe size={28} className={css.icon} /> Країна виробник: <span className={css.textFieldValue}>{country}</span></p>
+      <p className={css.textField}><AiOutlineClockCircle size={28} className={css.icon} /> Рік випуску: <span className={css.textFieldValue}>{year}</span></p>
+      <p className={css.textField}><AiOutlineDollarCircle size={28} className={css.icon} /> Ціна: <span className={css.textFieldValue}>{price}</span></p>
+      <p className={css.textField}><AiOutlineInfoCircle size={28} className={css.icon} /> Опис: <span className={css.textFieldValue}>{description}</span></p>
       {/*//! заголовок зображень */}
-      <h4 className={css.imageTitles}>Рекламна модель:</h4>
+      <h4 className={css.imageTitles}><GiAirplaneDeparture size={32} className={css.iconImageTitles} /> Рекламна модель:</h4>
       <img src={urlPromotional} alt={nameBrief} className="promotionalImage" />
       {/*//! заголовок зображень */}
-      <h4 className={css.imageTitles}>Реальна модель:</h4>
+      <h4 className={css.imageTitles}><CiAirportSign1 size={32} className={css.iconImageTitles} /> Реальна модель:</h4>
       <div className={css.actualImageBox}>
         {urlActual.map(item =>
           <img
