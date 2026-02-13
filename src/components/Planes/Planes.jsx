@@ -38,6 +38,9 @@ console.log("1️⃣getBgColorBuiltInStyles(1951):", getBgColorBuiltInStyles(195
 console.log("2️⃣getBgColorVanillaCSS(1951):", getBgColorVanillaCSS(1951));
 console.log("3️⃣getBgColorCSSModule(1951):", getBgColorCSSModule(1951));
 
+//! Константи для розмірів іконок
+import { iconSize } from '@/constants';
+
 
 export function Planes({
   urlMain = defaultImage, //! Дефолтне зображення
@@ -63,9 +66,10 @@ export function Planes({
   return (
     <>
       {/* //! Приклад react-icons */}
-      {/* <FaMapMarkerAlt /><FaUserAlt /><FaCalendarAlt /><FaClock /> */}
-      {/* <FaMapMarkerAlt size={iconSize.sm} /> */}
-
+      {/* <FaMapMarkerAlt />
+      <FaUserAlt />
+      <FaCalendarAlt />
+      <FaClock /> */}
       <h3 className={css.planeTitle}>{nameBrief}</h3>
       <img src={urlMain} alt={nameBrief} />
       {/* <p className="textField">Повна назва: <span className="textFieldValue boldStyle">{nameFull}</span></p> */}
@@ -78,12 +82,12 @@ export function Planes({
       {/* <p className={css.textField}><TbClockHour4Filled size={28} className={css.icon} /> Тривалість виробництва (в роках): <span className={css.textFieldValue}>{duration}</span></p> */}
       <p className={css.textField}><TbClockHour4Filled size={28} className={css.icon} /> Тривалість виробництва (в роках): <span className={css.textFieldValue}>{getManufacturingYears(manufacturingStart, manufacturingEnd)}</span></p>
       <p className={css.textField}><AiOutlineDollarCircle size={28} className={css.icon} /> Ціна: <span className={css.textFieldValue}>{price}</span></p>
-      <p className={css.textField}><AiOutlineInfoCircle size={28} className={css.icon} /> Опис: <span className={css.textFieldValue}>{description}</span></p>
+      <p className={css.textField}><AiOutlineInfoCircle size={iconSize.md} className={css.icon} /> Опис: <span className={css.textFieldValue}>{description}</span></p>
       {/*//! заголовок зображень */}
       <h4 className={css.imageTitles}><GiAirplaneDeparture size={32} className={css.iconImageTitles} /> Рекламна модель:</h4>
       <img src={urlPromotional} alt={nameBrief} className="promotionalImage" />
       {/*//! заголовок зображень */}
-      <h4 className={css.imageTitles}><CiAirportSign1 size={32} className={css.iconImageTitles} /> Реальна модель:</h4>
+      <h4 className={css.imageTitles}><CiAirportSign1 size={iconSize.lg} className={css.iconImageTitles} /> Реальна модель:</h4>
       <div className={css.actualImageBox}>
         {urlActual.map(item =>
           <img
