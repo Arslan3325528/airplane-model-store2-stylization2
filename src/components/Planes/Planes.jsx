@@ -5,6 +5,7 @@ import { FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock } from 'react-icons/f
 import { AiOutlineFlag, AiOutlineInfoCircle, AiOutlineClockCircle, AiOutlineDollarCircle } from "react-icons/ai";
 import { GiArmoredBoomerang, GiCeremonialMask, GiAirplaneDeparture, GiCommercialAirplane, GiCurlyMask } from "react-icons/gi";
 import { CiBadgeDollar, CiGlobe, CiAirportSign1 } from "react-icons/ci";
+import { TbClockHour4Filled } from "react-icons/tb";
 import { FcTrademark } from "react-icons/fc";
 
 //? nameBrief
@@ -13,6 +14,7 @@ import { FcTrademark } from "react-icons/fc";
 //? nickname - <GiCeremonialMask /> маска1, <GiCurlyMask /> маска2  - Прізвисько
 //? country - <AiOutlineFlag /> - прапор, <CiGlobe /> - глобус - Країна виробник
 //? year - <AiOutlineClockCircle /> - годинник - Рік випуску
+//? duration - <TbClockHour4Filled /> - годинник - Тривалість виробництва(в роках)
 //? price - <CiBadgeDollar/> - $, <AiOutlineDollarCircle /> - $ - Ціна
 //? description - <AiOutlineInfoCircle /> - info - Опис
 //? <GiAirplaneDeparture /> - Рекламна модель
@@ -62,7 +64,7 @@ export function Planes({
       <p className={css.textField}><GiCurlyMask size={28} className={css.icon} /> Прізвисько: <span className={css.textFieldValue}>{nickname}</span></p>
       <p className={css.textField}><CiGlobe size={28} className={css.icon} /> Країна виробник: <span className={css.textFieldValue}>{country}</span></p>
       <p className={css.textField}><AiOutlineClockCircle size={28} className={css.icon} /> Рік випуску: <span className={css.textFieldValue}>{year}</span></p>
-      <p className={css.textField}><AiOutlineClockCircle size={28} className={css.icon} /> Тривалість виробництва (в роках): <span className={css.textFieldValue}>{duration}</span></p>
+      <p className={css.textField}><TbClockHour4Filled size={28} className={css.icon} /> Тривалість виробництва (в роках): <span className={css.textFieldValue}>{duration}</span></p>
       <p className={css.textField}><AiOutlineDollarCircle size={28} className={css.icon} /> Ціна: <span className={css.textFieldValue}>{price}</span></p>
       <p className={css.textField}><AiOutlineInfoCircle size={28} className={css.icon} /> Опис: <span className={css.textFieldValue}>{description}</span></p>
       {/*//! заголовок зображень */}
