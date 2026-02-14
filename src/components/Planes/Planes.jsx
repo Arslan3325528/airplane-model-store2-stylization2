@@ -121,5 +121,7 @@ Planes.propTypes = {
   type: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   // price: PropTypes.number.isRequired,  //! контроль propTypes
-  description: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
+  manufacturingStart: PropTypes.string.isRequired,
+  manufacturingEnd: PropTypes.string.isRequired
 };
