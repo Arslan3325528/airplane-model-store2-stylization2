@@ -19,7 +19,7 @@ import { FcTrademark } from "react-icons/fc";
 //? <GiAirplaneDeparture /> - Рекламна модель
 //? <CiAirportSign1 /> - Реальна модель
 
-import css from "./Planes.module.css";
+import css from "./Planes.module.css"; //! CSS-модулі
 
 // import defaultImage from "../default.jpg"; //! Дефолтне зображення
 import defaultImage from "@/components/default.jpg"; //! Дефолтне зображення --> ✅✅✅Аліаси імпортів з абсолютними шляхами з jsconfig.json
