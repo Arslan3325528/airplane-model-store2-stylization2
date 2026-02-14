@@ -1,4 +1,8 @@
 import PropTypes from 'prop-types';
+import css from "./Planes.module.css"; //! CSS-модулі
+
+// import defaultImage from "../default.jpg"; //! Дефолтне зображення
+import defaultImage from "@/components/default.jpg"; //! Дефолтне зображення --> ✅✅✅Аліаси імпортів з абсолютними шляхами з jsconfig.json
 
 //! Бібліотека react-icons
 import { FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'; //! Приклад react-icons
@@ -18,11 +22,6 @@ import { FcTrademark } from "react-icons/fc";
 //? description - <AiOutlineInfoCircle /> - info - Опис
 //? <GiAirplaneDeparture /> - Рекламна модель
 //? <CiAirportSign1 /> - Реальна модель
-
-import css from "./Planes.module.css"; //! CSS-модулі
-
-// import defaultImage from "../default.jpg"; //! Дефолтне зображення
-import defaultImage from "@/components/default.jpg"; //! Дефолтне зображення --> ✅✅✅Аліаси імпортів з абсолютними шляхами з jsconfig.json
 
 //! Для розрахунку тривалості виробництва
 // import { getManufacturingYears } from '@/utils/formatDateDuration.js';
