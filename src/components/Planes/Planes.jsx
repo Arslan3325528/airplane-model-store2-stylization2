@@ -111,7 +111,7 @@ export function Planes({
 Planes.propTypes = {
   urlMain: PropTypes.string.isRequired,
   urlPromotional: PropTypes.string.isRequired,
-  urlActual: PropTypes.string.isRequired,
+  urlActual: PropTypes.array,
   nameBrief: PropTypes.string.isRequired,
   nameFull: PropTypes.string.isRequired,
   nickname: PropTypes.string.isRequired,
