@@ -9,7 +9,10 @@ import css from "./PlanesList.module.css"; //! CSS-модулі
 import { Planes } from '@/components/Planes/Planes.jsx'; //! CSS-модулі --> ✅✅✅Аліаси імпортів з абсолютними шляхами з jsconfig.json
 
 // import { getBgColorBuiltInStyles, getBgColorVanillaCSS, getBgColorCSSModule } from '../../utils/getBackgroundColor.js'; //! вбудовані стилі + ванільний CSS
-import { getBgColorBuiltInStyles, getBgColorVanillaCSS, getBgColorCSSModule } from '@/utils/getBackgroundColor.js'; //! вбудовані стилі + ванільний CSS + CSS-модулі --> ✅✅✅Аліаси імпортів з абсолютними шляхами з jsconfig.json
+// import { getBgColorBuiltInStyles, getBgColorVanillaCSS, getBgColorCSSModule } from '@/utils/getBackgroundColor.js'; //! вбудовані стилі + ванільний CSS + CSS-модулі --> ✅✅✅Аліаси імпортів з абсолютними шляхами з jsconfig.json
+//! Реекспорт - декілька імпортів з однієї папки
+import { getBgColorBuiltInStyles, getBgColorVanillaCSS, getBgColorCSSModule } from '@/utils'; //! вбудовані стилі + ванільний CSS + CSS-модулі --> ✅✅✅Аліаси імпортів з абсолютними шляхами з jsconfig.json
+
 
 export function PlanesList({ items }) {
     return (
