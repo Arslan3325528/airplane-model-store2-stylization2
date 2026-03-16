@@ -55,10 +55,8 @@ export function Planes({
   description,
   manufacturingStart,
   manufacturingEnd
-}) {
-  function printlActualimages(urlActual) {
-    urlActual.map
-  }
+}) 
+{
   //! Розраховуємо тривалість виробництва
   const duration = getManufacturingYears(manufacturingStart, manufacturingEnd);
   // console.log("duration", duration); //!
