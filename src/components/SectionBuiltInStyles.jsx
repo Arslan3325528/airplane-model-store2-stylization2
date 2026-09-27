@@ -8,7 +8,7 @@ function Section({ title, children }) {
         <h2
           style={{
             marginBottom: 24,
-            fontSize: 48,
+            fontSize: '48px',
             textAlign: 'center',
             color: "darkred",
           }}

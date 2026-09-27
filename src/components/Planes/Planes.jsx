@@ -86,9 +86,10 @@ export function Planes({
       {/*//! заголовок зображень */}
       <h4 className={css.imageTitles}><CiAirportSign1 size={iconSize.lg} className={css.iconImageTitles} /> Реальна модель:</h4>
       <div className={css.actualImageBox}>
-        {urlActual.map(item =>
+        {urlActual.map((item, index) =>
           <img
-            // key={item} //! поки що не унікальний
+            // key={item} //!  не зовсім унікальний
+            key={index} //!  не зовсім стабільний
             src={item}
             alt={nameBrief}
             className={css.actualImage}

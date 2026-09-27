@@ -35,9 +35,6 @@ export default function Planes({
   description
 })
 {
-  function printlActualimages(urlActual) {
-    urlActual.map
-  }
   return (
     <>
       <h3
@@ -98,7 +95,7 @@ export default function Planes({
           padding: "16px 32px",
           display: "inline-block",
           alignItems: "center",
-          fontFmily: 'Franklin Gothic Medium, Arial Narrow',
+          fontFamily: 'Franklin Gothic Medium, Arial Narrow',
           fontWeight: 700,
           fontSize: "1.5rem",
           borderRadius: "12px",

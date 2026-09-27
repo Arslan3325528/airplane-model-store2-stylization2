@@ -16,9 +16,6 @@ export default function Planes({
   description
 })
 {
-  function printlActualimages(urlActual) {
-    urlActual.map
-  }
   return (
     <>
       <h3>{nameBrief}</h3>
