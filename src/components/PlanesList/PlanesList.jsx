@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from "./PlanesList.module.css"; //! CSS-модулі
  
-// import Planes from './PlanesWOSyle'; //! без стилізації
+// import Planes from './PlanesWOStyle'; //! без стилізації
 // import Planes from './PlanesBuiltInStyles'; //! вбудовані стилі
 // import Planes from './PlanesVanillaCSS'; //! ванільний CSS
 
